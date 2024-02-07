@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import pg from "pg";
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 // Configure PostgreSQL connection
 const db = new pg.Client({
