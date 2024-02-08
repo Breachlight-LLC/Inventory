@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # History
-.history
+.history/
