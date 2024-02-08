@@ -11,7 +11,7 @@ import pkgg from 'pg';
 const {Pool} = pkgg;
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 const pool = new Pool({
     user: "kevin.d.jones.jr",
