@@ -6,20 +6,34 @@ import pkg from 'dd-trace';
 const { init: initTracer } = pkg;
 import express from "express";
 import bodyParser from "body-parser";
-import pg from "pg";
+// import {Pool} from "pg";
+import pkgg from 'pg';
+const {Pool} = pkgg;
 
 const app = express();
 const port = 3000;
 
+const pool = new Pool({
+    user: "kevin.d.jones.jr",
+    host: "ep-round-moon-a4wa62f7.us-east-1.aws.neon.tech",
+    database: "inventory",
+    password: "pvTk4xGnrM7O",
+    port: 5432,
+    
+    // connectionString: process.env.DATABASE_URL,
+    ssl: true
+  });
+  const db = await pool.connect();
+
 // Configure PostgreSQL connection
-const db = new pg.Client({
-  user: "postgres",
-  host: "inventorydb.ckijnvawubo6.us-east-1.rds.amazonaws.com",
-  database: "inventory",
-  password: "12345678",
-  port: 5432,
-});
-db.connect();
+// const db = new pg.Client({
+//   user: "postgres",
+//   host: "",
+//   database: "",
+//   password: "",
+//   port: 5432,
+// });
+// db.connect();
 
 // Middleware
 app.use(bodyParser.json());
