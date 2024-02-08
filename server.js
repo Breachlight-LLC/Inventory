@@ -9,9 +9,9 @@ const port = 80;
 // Configure PostgreSQL connection
 const db = new pg.Client({
   user: "postgres",
-  host: "localhost",
+  host: "inventory.ckijnvawubo6.us-east-1.rds.amazonaws.com",
   database: "inventory",
-  password: "1234567",
+  password: "12345678",
   port: 5432,
 });
 db.connect();
