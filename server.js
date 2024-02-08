@@ -1,10 +1,12 @@
 // server.js
+// This line must come before importing any instrumented module.
+const tracer = require('dd-trace').init()
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 
 const app = express();
-const port = 80;
+const port = 3000;
 
 // Configure PostgreSQL connection
 const db = new pg.Client({
