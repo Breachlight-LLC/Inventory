@@ -1,7 +1,9 @@
 // server.js
 // This line must come before importing any instrumented module.
 // const tracer = require('dd-trace').init()
-import { init as initTracer } from 'dd-trace';
+// import { init as initTracer } from 'dd-trace';
+import pkg from 'dd-trace';
+const { init: initTracer } = pkg;
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
