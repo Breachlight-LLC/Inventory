@@ -42,8 +42,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Store static assets
 app.use(express.static("public"));
 
-// Routes
-app.get("/", async (req, res) => {
+// Routes Injecting broken route for testing
+app.get("/api", async (req, res) => {
   const result = await db.query("SELECT * FROM items");
   const items = result.rows;
   res.render("index.ejs", { items });
