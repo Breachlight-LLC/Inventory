@@ -11,11 +11,11 @@ const app = express();
 const port = 80;
 
 const pool = new Pool({
-    user: "kevin.d.jones.jr",
-    host: "ep-round-moon-a4wa62f7.us-east-1.aws.neon.tech",
-    database: "inventory",
-    password: "pvTk4xGnrM7O",
-    port: 5432,
+    user: "",
+    host: "",
+    database: "",
+    password: "",
+    port: ,
     // connectionString: process.env.DATABASE_URL,
     ssl: true
   });
@@ -27,7 +27,7 @@ const pool = new Pool({
 //   host: "",
 //   database: "",
 //   password: "",
-//   port: 5432,
+//   port: ,
 // });
 // db.connect();
 
